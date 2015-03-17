@@ -6,8 +6,6 @@
  * and open the template in the editor.
  */
 
-include_once("model/Osoba.php");
-
 class Model {
 
     private $listOfRecords;
@@ -22,7 +20,7 @@ class Model {
     }
 
     public function getPerson($id) {
-        $sql = "SELECT * FROM film WHERE idfilmy=?";
+        $sql = "SELECT * FROM osoba WHERE idosoba=?";
         $people = Database::queryArray($sql, array($id));
         return $people[0];
     }

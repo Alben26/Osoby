@@ -28,8 +28,8 @@ class Controller {
         }
 
         if ($action == "view") {
-            $nadpis = "Detail osoby";
-            $film = $this->model->getPerson($id);
+            $nadpis = "Osobní údaje";
+            $person = $this->model->getPerson($id);
             include "view/viewPerson.php";
         }
 
