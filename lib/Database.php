@@ -17,8 +17,7 @@ class Database {
     
     public static function connect($host, $user, $password, $database) {
         
-        if (!isset(self::$connection)) {
-            
+        if (!isset(self::$connection)) {     
             try {
               self::$connection = @new PDO(
                   "mysql:host=$host;dbname=$database",
@@ -32,14 +31,11 @@ class Database {
               echo "<p>Chyba připojení k DB serveru</p>";
               die($e->getMessage());
             }
-        }
-        
+        }        
         return self::$connection;
     }
-
-            
-    public static function query($sql, $parameters = array()) {
-        
+       
+    public static function query($sql, $parameters = array()) {      
         try {
           $q = self::$connection->prepare($sql);
           
@@ -52,8 +48,7 @@ class Database {
         }
     }
              
-    public static function queryArray($sql, $parameters = array()) {
-        
+    public static function queryArray($sql, $parameters = array()) {       
         try {
           $q = self::$connection->prepare($sql);
           @$q->execute($parameters);

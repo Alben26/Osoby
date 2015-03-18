@@ -31,14 +31,14 @@ class Model {
     }
 
     public function insertPerson($data) {
-        $sql = "INSERT INTO osoba SET prijmeni=:prijmeni, jmeno=:jmeno, rodne_cislo=:rodne_cislo,"
-                . "pohlavi=:pohlavi, ulice=:ulice, cislo=:cislo, telefon=:telefon, mail=:mail, mesto_psc:mesto_psc";
+        $sql = "INSERT INTO osoba SET prijmeni=:prijmeni, jmeno=:jmeno, rodne_cislo=:rodne_cislo, "
+                . "pohlavi=:pohlavi, ulice=:ulice, cislo=:cislo, telefon=:telefon, mail=:mail, mesto_psc=:mesto_psc";
         return Database::query($sql, $data);
     }
     
     public function updatePerson($data) {
         $sql = "UPDATE osoba SET prijmeni=:prijmeni, jmeno=:jmeno, rodne_cislo=:rodne_cislo,"
-                . "pohlavi=:pohlavi, ulice=:ulice, cislo=:cislo, telefon=:telefon, mail=:mail, mesto_psc:mesto_psc";
+                . "pohlavi=:pohlavi, ulice=:ulice, cislo=:cislo, telefon=:telefon, mail=:mail, mesto_psc=:mesto_psc";
         return Database::query($sql, $data);
     }
 }

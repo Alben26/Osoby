@@ -57,9 +57,9 @@ class Controller {
                     "cislo" => "",
                     "mesto_psc" => ""
                 );
-                include 'view/formFilm.php';
+                include 'view/formPerson.php';
             } else {
-                $film = array(
+                $person = array(
                     "prijmeni" => $_POST["prijmeni"],
                     "jmeno" => $_POST["jmeno"],
                     "rodne_cislo" => $_POST["rodne_cislo"],
